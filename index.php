@@ -4,8 +4,8 @@
     session_start();
     $is_logged_in = isset ($_SESSION['user']);
     $user = $is_logged_in ? $_SESSION['user'] : null;
-    include 'include/header.php'; 
-    include 'include/nav.php';
+    include 'views/include/header.php'; 
+    include 'views/include/nav.php';
 ?>
     <!-- Hero Section -->
      <section class="hero bg-light py-5">
@@ -21,7 +21,7 @@
                 <div class="alert alert-succes d-inline-block">
                     Bienvenu, <?php echo htmlspecialchars($user['nom']); ?>!
                 </div> <br>
-                <a href="pages/cours.php" class="btn btn-primary btn-lg">Contineur l'apprentissage</a>
+                <a href="views/pages/cours.php" class="btn btn-primary btn-lg">Contineur l'apprentissage</a>
             <?php else: ?>
                 <div class="mt-4">
                     <a href="auth/register.php" class="btn btn-primary btn-lg mt-3">Commencer gratuitement</a>
@@ -88,4 +88,4 @@
     </section>
 </body>
 </html>
-<?php include 'include/footer.php'; ?>
+<?php include 'views/include/footer.php'; ?>
