@@ -1,0 +1,46 @@
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.icone-tech {
+    font-size: 3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.icone-tech:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Transition pour le collapse --- */
+#navbarNav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+#navbarNav.show {
+  max-height: 500px; /* Assez grand pour afficher tout le menu */
+}
+
+/* --- Dropdown avec transition --- */
+.dropdown-menu {
+  display: block; /* toujours block, mais invisible par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

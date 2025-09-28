@@ -1,40 +1,89 @@
 {
-    "cours": [
+  "cours": [
+    {
+      "id": 1,
+      "technologie": "HTML",
+      "titre": "Introduction au HTML",
+      "description": "Apprenez les bases du HTML et créez votre première page web",
+      "niveau": "débutant",
+      "duree": "2 heures",
+      "badge_color": "primary",
+      "sections": [
         {
-            "id": 1,
-            "technologie": "HTML",
-            "description": "Apprenez les bases du HTML et créez votre premier page web",
-            "titre": "Inroduction HTML",
-            "niveau": "débuant",
-            "duree": "2 heures",
-            "badge_color": "primary",
-            "sections": [
-                {
-                    "id_section": 1,
-                    "titre": "Les balises de base",
-                    "contenu": "Le HTML (HyperText Markup Langage) est le langage de base pour créez des pages web> Il utilise des balises pour structurer le contenu.",
-                    "exemple_code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Ma page</title>\n</head>\n<body>\n   <h1>Mon premier Titre</h1>\n <p>Mon premier paragraphe</p>\n</body>\n</html> ",
-                    "type": "theorie"
-                }
-            ]
+          "id_section": 1,
+          "titre": "Les balises de base",
+          "contenu": "Le HTML (HyperText Markup Language) est le langage de base pour créer des pages web. Il utilise des balises pour structurer le contenu.",
+          "exemple_code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Ma Page</title>\n</head>\n<body>\n    <h1>Mon Premier Titre</h1>\n    <p>Mon premier paragraphe.</p>\n</body>\n</html>",
+          "type": "theorie"
         },
         {
-            "id": 2,
-            "technologie": "CSS",
-            "titre": "Les bases de CSS",
-            "description": "Maîtrisez les styles de CSS pour embelir vos pages web",
-            "niveau": "débuant",
-            "duree": "3 heures",
-            "badge_color": "success",
-            "sections": [
-                {
-                    "id_section": 1,
-                    "titre": "Sélecteurs et propriétés",
-                    "contenu": "Le CSS permet de styliser les éléments HTML en utilisant ",
-                    "exemple_code": "h1 {\n     color: blue;\n      font-size: 24px;\n}\n\np {\n        color: gray;\n      line-height: 1.5;\n}",
-                    "type": "theorie"
-                }
-            ]
+          "id_section": 2,
+          "titre": "Les liens et images",
+          "contenu": "Les liens permettent de naviguer entre les pages, et les images d'enrichir le contenu visuel.",
+          "exemple_code": "<a href=\"page2.html\">Aller à la page 2</a>\n<img src=\"image.jpg\" alt=\"Description\">",
+          "type": "theorie"
         }
-    ]
+      ],
+      "exercices": [
+        {
+          "id_exercice": 1,
+          "enonce": "Créez une page HTML de base avec un titre principal et un paragraphe",
+          "solution": "<h1>Bienvenue sur mon site</h1>\n<p>Ceci est mon premier site web en HTML.</p>",
+          "indices": ["Commencez par la structure de base HTML", "Utilisez h1 pour le titre", "Utilisez p pour le paragraphe"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "technologie": "CSS",
+      "titre": "Les bases du CSS",
+      "description": "Maîtrisez les styles CSS pour embellir vos pages web",
+      "niveau": "débutant",
+      "duree": "3 heures",
+      "badge_color": "success",
+      "sections": [
+        {
+          "id_section": 1,
+          "titre": "Sélecteurs et propriétés",
+          "contenu": "Le CSS permet de styliser les éléments HTML en utilisant des sélecteurs et des propriétés.",
+          "exemple_code": "h1 {\n    color: blue;\n    font-size: 24px;\n}\n\np {\n    color: gray;\n    line-height: 1.5;\n}",
+          "type": "theorie"
+        }
+      ],
+      "exercices": [
+        {
+          "id_exercice": 1,
+          "enonce": "Stylez un titre en rouge avec une taille de police de 32px",
+          "solution": "h1 {\n    color: red;\n    font-size: 32px;\n}",
+          "indices": ["Utilisez le sélecteur h1", "Propriété color: red", "Propriété font-size: 32px"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "technologie": "JavaScript",
+      "titre": "JavaScript Fondamental",
+      "description": "Découvrez la programmation avec JavaScript",
+      "niveau": "intermédiaire",
+      "duree": "4 heures",
+      "badge_color": "warning",
+      "sections": [
+        {
+          "id_section": 1,
+          "titre": "Variables et fonctions",
+          "contenu": "JavaScript permet d'ajouter de l'interactivité aux pages web.",
+          "exemple_code": "let message = 'Bonjour';\nfunction afficherMessage() {\n    alert(message);\n}",
+          "type": "theorie"
+        }
+      ],
+      "exercices": [
+        {
+          "id_exercice": 1,
+          "enonce": "Créez une fonction qui affiche une alerte avec votre nom",
+          "solution": "function monNom() {\n    alert('Jean');\n}",
+          "indices": ["Utilisez le mot-clé function", "Utilisez alert() pour l'affichage"]
+        }
+      ]
+    }
+  ]
 }
