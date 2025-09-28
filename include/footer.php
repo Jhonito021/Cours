@@ -1,0 +1,1 @@
+<script src="public/bootstrap-4.0.0-dist/js/bootstrap.mi.js"></script>

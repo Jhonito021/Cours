@@ -1,0 +1,40 @@
+{
+    "cours": [
+        {
+            "id": 1,
+            "technologie": "HTML",
+            "description": "Apprenez les bases du HTML et créez votre premier page web",
+            "titre": "Inroduction HTML",
+            "niveau": "débuant",
+            "duree": "2 heures",
+            "badge_color": "primary",
+            "sections": [
+                {
+                    "id_section": 1,
+                    "titre": "Les balises de base",
+                    "contenu": "Le HTML (HyperText Markup Langage) est le langage de base pour créez des pages web> Il utilise des balises pour structurer le contenu.",
+                    "exemple_code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Ma page</title>\n</head>\n<body>\n   <h1>Mon premier Titre</h1>\n <p>Mon premier paragraphe</p>\n</body>\n</html> ",
+                    "type": "theorie"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "technologie": "CSS",
+            "titre": "Les bases de CSS",
+            "description": "Maîtrisez les styles de CSS pour embelir vos pages web",
+            "niveau": "débuant",
+            "duree": "3 heures",
+            "badge_color": "success",
+            "sections": [
+                {
+                    "id_section": 1,
+                    "titre": "Sélecteurs et propriétés",
+                    "contenu": "Le CSS permet de styliser les éléments HTML en utilisant ",
+                    "exemple_code": "h1 {\n     color: blue;\n      font-size: 24px;\n}\n\np {\n        color: gray;\n      line-height: 1.5;\n}",
+                    "type": "theorie"
+                }
+            ]
+        }
+    ]
+}
