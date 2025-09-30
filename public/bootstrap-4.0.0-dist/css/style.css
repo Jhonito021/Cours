@@ -3,44 +3,139 @@
     color: white;
 }
 
-.icone-tech {
-    font-size: 3rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
+.tech-icon {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
 }
-.icone-tech:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
+
+.tech-icon:hover {
+    transform: scale(1.1);
 }
 
 .card {
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    border-radius: 15px;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* --- Transition pour le collapse --- */
-#navbarNav {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
-}
-#navbarNav.show {
-  max-height: 500px; /* Assez grand pour afficher tout le menu */
+.course-card {
+    border-left: 4px solid #007bff;
 }
 
-/* --- Dropdown avec transition --- */
+.code-editor {
+    font-family: 'Courier New', monospace;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.stat-item h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.stat-item p {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 10px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+    font-family: 'Courier New', monospace;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+}
+
+.course-meta {
+    border-top: 1px solid #e9ecef;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+/* Navigation améliorée */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 .dropdown-menu {
-  display: block; /* toujours block, mais invisible par défaut */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.dropdown-menu.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+
+/* Alertes personnalisées */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .avatar-placeholder {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation pour les icônes */
+.fas, .fab, .far {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover .fas,
+.btn:hover .fab,
+.btn:hover .far {
+    transform: scale(1.1);
 }

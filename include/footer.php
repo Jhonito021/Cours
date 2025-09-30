@@ -1,5 +1,4 @@
 <script>
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggler = document.querySelector(".navbar-toggler");
   const collapse = document.getElementById("navbarNav");

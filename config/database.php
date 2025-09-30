@@ -1,6 +1,7 @@
 <?php
+require '../config/database.php';
 class Database {
-    private $users_file = 'data/utilisateurs.json';
+    private $users_file = 'pages/data/utilisateur.json';
     
     public function __construct() {
         // S'assurer que le dossier data existe
