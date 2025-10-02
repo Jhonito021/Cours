@@ -1,9 +1,8 @@
 <?php
-session_start();
-require_once '../config/database.php';
 
-// Initialiser la base de données
-$db = new Database();
+    require_once __DIR__ . '/../config/database.php';
+
+    $db = new Database(__DIR__ . '/../data/utilisateur.json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
@@ -17,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'nom' => $user['nom'],
             'email' => $user['email']
         ];
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit;
     } else {
         $error = "Email ou mot de passe incorrect";
@@ -30,11 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - LearnWebDev</title>
-    <link rel="stylesheet" href="../public/bootstrap-4.0.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <?php include 'navLog.php'; ?>
 
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -64,15 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </form>
                         
                         <div class="text-center mt-3">
-                            <p>Pas encore de compte ? <a href="register.php">Créer un compte</a></p>
+                            <p>Pas encore de compte ? <a href="index.php?page=inscription">Créer un compte</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../public/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-</body>
-</html>

@@ -1,5 +1,4 @@
 <?php
-require_once '../include/auth_check.php';
 $cours_id = $_GET['id'] ?? 1;
 $cours_data = json_decode(file_get_contents('../data/cours.json'), true);
 $cours = null;
@@ -161,9 +160,3 @@ if(!$cours) {
             </div>
         </div>
     </div>
-
-    <script src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-    <script src="../js/editor.js"></script>
-</body>
-</html>

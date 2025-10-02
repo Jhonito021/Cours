@@ -8,6 +8,7 @@
       "niveau": "débutant",
       "duree": "2 heures",
       "badge_color": "primary",
+      "icone": "fa-html5",
       "sections": [
         {
           "id_section": 1,
@@ -41,6 +42,7 @@
       "niveau": "débutant",
       "duree": "3 heures",
       "badge_color": "success",
+      "icone": "fa-css3-alt",
       "sections": [
         {
           "id_section": 1,
@@ -67,6 +69,7 @@
       "niveau": "intermédiaire",
       "duree": "4 heures",
       "badge_color": "warning",
+      "icone": "fa-js-square",
       "sections": [
         {
           "id_section": 1,

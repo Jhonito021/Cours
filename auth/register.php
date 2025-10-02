@@ -1,9 +1,7 @@
 <?php
-session_start();
-require_once '../config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
-// Initialiser la base de données
-$db = new Database();
+    $db = new Database(__DIR__ . '/../data/utilisateur.json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = trim($_POST['nom'] ?? '');
@@ -63,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'nom' => $nom,
                 'email' => $email
             ];
-            header('Location: ../index.php');
+            header('Location: index.php');
             exit;
         } else {
             $errors[] = "Erreur lors de la création du compte";
@@ -77,12 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - LearnWebDev</title>
-    <link rel="stylesheet" href="../public/bootstrap-4.0.0-dist/css//bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <?php include 'navLog.php'; ?>
-
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -128,15 +124,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </form>
                         
                         <div class="text-center mt-3">
-                            <p>Déjà un compte ? <a href="login.php">Se connecter</a></p>
+                            <p>Déjà un compte ? <a href="index.php?page=connexion">Se connecter</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-</body>
-</html>

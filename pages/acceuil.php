@@ -13,11 +13,11 @@
                 <div class="alert alert-succes d-inline-block">
                     Bienvenu, <?php echo htmlspecialchars($user['nom']); ?>!
                 </div> <br>
-                <a href="pages/cours.php" class="btn btn-primary btn-lg">Contineur l'apprentissage</a>
+                <a href="index.php?page=cours" class="btn btn-primary btn-lg">Contineur l'apprentissage</a>
             <?php else: ?>
                 <div class="mt-4">
-                    <a href="auth/register.php" class="btn btn-primary btn-lg mt-3">Commencer gratuitement</a>
-                    <a href="auth/login.php" class="btn btn-outline-primary btn-lg mt-3">
+                    <a href="index.php?page=inscription" class="btn btn-primary btn-lg mt-3">Commencer gratuitement</a>
+                    <a href="index.php?page=connexion" class="btn btn-outline-primary btn-lg mt-3">
                         <i class="fas fa-sign-in-alt"></i> Se connecter
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <span class="badge badge-<?php echo $cours['badge_color']; ?> mb-2">
-                                    <?php echo $cours['technologie']; ?>
+                                    <i class="fab <?php echo $cours['icone'] ?>"></i> <?php echo $cours['technologie']; ?>
                                 </span>
                                 <h5 class="card-title"> <?php echo $cours['description']; ?></h5>
                                 <p class="card-text"> <?php echo $cours['titre']; ?></p>
@@ -71,7 +71,7 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="pages/cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
+                                <a href="index.php?page=cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
                                     <i class="fas fa-eye"></i> Voir le cours
                                 </a>
                             </div>

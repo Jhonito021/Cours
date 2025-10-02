@@ -1,6 +1,6 @@
 <?php 
     if (!isset($_SESSION['user'])) {
-        header('Location: ../auth/login.php');
+        header('Location: index.php?page=connexion');
         exit;
     }
 ?>
@@ -72,9 +72,3 @@
             <?php endforeach; ?>
         </div>
     </div>
-
-    <script src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-    <script src="../js/filter.js"></script>
-</body>
-</html>

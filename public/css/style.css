@@ -3,14 +3,13 @@
     color: white;
 }
 
-.tech-icon {
-    width: 100px;
-    height: 100px;
+.icone-tech {
+    font-size: 3.5rem;
     font-weight: bold;
     transition: transform 0.3s ease;
 }
 
-.tech-icon:hover {
+.icone-tech:hover {
     transform: scale(1.1);
 }
 
