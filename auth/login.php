@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - LearnWebDev</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
@@ -48,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
                         <form method="POST">
                             <div class="form-group">
-                                <label for="email">Email :</label>
+                                <label for="email">Email <i class="fas fa-envelope"></i> :</label>
                                 <input type="email" class="form-control" id="email" name="email" required 
                                        value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
                             </div>
                             
                             <div class="form-group">
-                                <label for="password">Mot de passe :</label>
+                                <label for="password">Mot de passe <i class="fas fa-lock"></i> :</label> 
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
                             

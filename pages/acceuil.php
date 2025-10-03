@@ -13,7 +13,9 @@
                 <div class="alert alert-succes d-inline-block">
                     Bienvenu, <?php echo htmlspecialchars($user['nom']); ?>!
                 </div> <br>
-                <a href="index.php?page=cours" class="btn btn-primary btn-lg">Contineur l'apprentissage</a>
+                <a href="index.php?page=cours" class="btn btn-primary btn-lg">
+                    <i class="fa fa-play"></i> Contineur l'apprentissage
+                </a>
             <?php else: ?>
                 <div class="mt-4">
                     <a href="index.php?page=inscription" class="btn btn-primary btn-lg mt-3">Commencer gratuitement</a>
@@ -71,9 +73,15 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="index.php?page=cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-eye"></i> Voir le cours
-                                </a>
+                                <?php if ($is_logged_in): ?>
+                                    <a href="index.php?page=cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-eye"></i> Voir le cours
+                                    </a>
+                                <?php else: ?>
+                                    <a href="index.php?page=connexion" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-eye"></i> Voir le cours
+                                    </a>
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
@@ -81,7 +89,6 @@
             </div>
         </div>
     </section>
-    <?php include 'include/footer.php'; ?>
 </body>
 </html>
 

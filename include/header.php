@@ -1,14 +1,14 @@
 <?php
-
 $is_logged_in = isset($_SESSION['user']);
 $user = $is_logged_in ? $_SESSION['user'] : null;
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>apprentissage Technologies Web</title>
+    <title>Apprentissage Technologies Web</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,7 @@ $user = $is_logged_in ? $_SESSION['user'] : null;
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <a class="navbar-brand" href="index.php">
-            <i class="fas fa-book"></i> LearnWebDev
+            <i class="fas fa-book"></i> LearnDevWeb
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,9 @@ $user = $is_logged_in ? $_SESSION['user'] : null;
                 </li>
                 <?php if ($is_logged_in): ?>
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'cours.php' ? 'active' : ''; ?>">
-                        <a class="nav-link" href="index.php?page=cours">Cours</a>
+                        <a class="nav-link" href="index.php?page=cours">
+                            <i class="fas fa-book-open"></i> Cours
+                        </a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'cours.php' ? 'active' : ''; ?>">
@@ -40,21 +42,20 @@ $user = $is_logged_in ? $_SESSION['user'] : null;
                         </a>
                     </li>
                 <?php endif; ?>
-                
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if ($is_logged_in): ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                            👋 <?php echo htmlspecialchars($user['nom']); ?>
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <?= htmlspecialchars($user['nom']) ?>
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="index.php?page=profil">
                                 <i class="fas fa-user"></i> Mon profil
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="auth/logout.php">
-                                <i class="fas fa-sign-out-in-alt"></i> Déconnexion
+                            <a class="dropdown-item" href="index.php?page=deconnexion">
+                                <i class="fas fa-door-open"></i> Déconnexion
                             </a>
                         </div>
                     </li>

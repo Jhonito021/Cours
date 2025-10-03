@@ -1,10 +1,10 @@
 {
     "utilisateurs": [
         {
-            "id_utilisateur": "68de87feb7d4f",
+            "id_utilisateur": "68dfbd998c53f",
             "nom": "Jhonito",
             "email": "jhonito021@gmail.com",
-            "password": "$2y$10$KB8t6itH1s\/jXrvUyf6UROqFyO6VL.QSdQ.jPopTIZyjONiUXBj0S",
+            "password": "$2y$10$wrbbCNGQJRXzIwYdKoSy\/u.\/KKMdxMQFPQwgLbBtyDfwTr\/exb3oG",
             "progression": {
                 "cours_termines": [],
                 "scores_quiz": {
@@ -16,7 +16,8 @@
                 },
                 "projets_realises": []
             },
-            "date_inscription": "2025-10-02 14:11:11"
+            "date_inscription": "2025-10-03 12:12:09",
+            "avatar": "avatar_68dfbd998c53f.png"
         }
     ]
 }
