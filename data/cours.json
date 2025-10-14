@@ -7,7 +7,7 @@
       "description": "Apprenez les bases du HTML et créez votre première page web",
       "niveau": "débutant",
       "duree": "2 heures",
-      "badge_color": "primary",
+      "badge_color": "#e34c26",
       "icone": "fa-html5",
       "sections": [
         {
@@ -41,7 +41,7 @@
       "description": "Maîtrisez les styles CSS pour embellir vos pages web",
       "niveau": "débutant",
       "duree": "3 heures",
-      "badge_color": "success",
+      "badge_color": "#264de4",
       "icone": "fa-css3-alt",
       "sections": [
         {
@@ -68,7 +68,7 @@
       "description": "Découvrez la programmation avec JavaScript",
       "niveau": "intermédiaire",
       "duree": "4 heures",
-      "badge_color": "warning",
+      "badge_color": "#f7df1e",
       "icone": "fa-js-square",
       "sections": [
         {

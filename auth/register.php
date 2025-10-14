@@ -83,8 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow">
-                    <div class="card-header bg-success text-white text-center">
-                        <h3 class="mb-0">Créer un compte</h3>
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">
+                            <i class="fas fa-user-plus"></i> Créer un compte
+                        </h3>
                     </div>
                     <div class="card-body p-4">
                         <?php if (!empty($errors)): ?>
@@ -97,30 +99,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
                         <form method="POST">
                             <div class="form-group">
-                                <label for="nom">Nom complet :</label>
+                                <label for="nom">Nom complet <i class="fas fa-user"></i> :</label>
                                 <input type="text" class="form-control" id="nom" name="nom" required 
                                        value="<?php echo htmlspecialchars($_POST['nom'] ?? ''); ?>">
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email :</label>
+                                <label for="email">Email <i class="fas fa-envelope"></i> :</label>
                                 <input type="email" class="form-control" id="email" name="email" required 
                                        value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
                             </div>
                             
                             <div class="form-group">
-                                <label for="password">Mot de passe :</label>
+                                <label for="password">Mot de passe <i class="fas fa-lock"></i> :</label>
                                 <input type="password" class="form-control" id="password" name="password" required 
                                        minlength="6">
                                 <small class="form-text text-muted">Minimum 6 caractères</small>
                             </div>
                             
                             <div class="form-group">
-                                <label for="confirm_password">Confirmer le mot de passe :</label>
+                                <label for="confirm_password">Confirmer le mot de passe <i class="fas fa-lock"></i> :</label>
                                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
                             </div>
                             
-                            <button type="submit" class="btn btn-success btn-block">Créer mon compte</button>
+                            <button type="submit" class="btn btn-primary btn-block">Créer mon compte</button>
                         </form>
                         
                         <div class="text-center mt-3">

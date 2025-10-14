@@ -59,13 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Avatar : si vide, mettre image par défaut
 $avatarPath = !empty($user_data['avatar']) ? "uploads/avatars/{$user_data['avatar']}" : "https://via.placeholder.com/150";
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Modifier Profil</title>
-</head>
 <body class="mt-0">
     <div class="container mt-5">
         <h2>Modifier mon profil</h2>

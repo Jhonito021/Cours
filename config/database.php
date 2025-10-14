@@ -2,7 +2,8 @@
 require_once __DIR__ . '/../config/database.php';
 class Database {
     private $users_file = 'auth/utilisateur.json';
-    
+    private $avatar_file = 'uploads/avatars/';
+
     public function __construct() {
         // S'assurer que le dossier data existe
         if (!is_dir('data')) {
@@ -57,6 +58,7 @@ class Database {
         }
         return null;
     }
+
     
     private function initDatabase() {
         $initial_data = [

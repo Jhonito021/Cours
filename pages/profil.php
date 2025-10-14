@@ -29,7 +29,9 @@ $avatarPath = !empty($user_data['avatar']) ? "uploads/avatars/{$user_data['avata
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
+                    
                     <img src="<?php echo $avatarPath ?>" class="rounded-circle mb-3" alt="Avatar" style="width:80px; height:80px; border-radius:50%; object-fit: cover;">
+                   
                     <h4><?php echo htmlspecialchars($user_data['nom']); ?></h4>
                     <p class="text-muted"><?php echo htmlspecialchars($user_data['email']); ?></p>
                     
@@ -38,12 +40,6 @@ $avatarPath = !empty($user_data['avatar']) ? "uploads/avatars/{$user_data['avata
                     $cours_termines = count($user_data['progression']['cours_termines']);
                     $pourcentage = ($cours_termines / $total_cours) * 100;
                     ?>
-                    <div class="progress mb-2">
-                        <div class="progress-bar bg-success" style="width: <?php echo $pourcentage; ?>%">
-                            <?php echo round($pourcentage); ?>%
-                        </div>
-                    </div>
-                    <small>Progression globale</small>
                 </div>
             </div>
 
@@ -64,10 +60,7 @@ $avatarPath = !empty($user_data['avatar']) ? "uploads/avatars/{$user_data['avata
                        class="btn btn-outline-danger btn-block mb-2">
                         <i class="fas fa-trash"></i> Supprimer mon profil
                     </a>
-                    <a href="" class="btn btn-outline-success btn-block mb-2">
-                        <i class="fas fa-qrcode"></i> Mon code Qr
-                    </a>
-                    <a href="index.php?page=deconnexion" class="btn btn-outline-secondary btn-block">
+                    <a href="index.php?page=deconnexion" class="btn btn-outline-secondary btn-block" onclick=" return confirm('Souhaitez-vous vraim');">
                         <i class="fas fa-door-open"></i> Déconnexion
                     </a>
                 </div>

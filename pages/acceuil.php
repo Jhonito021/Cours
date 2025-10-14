@@ -30,7 +30,9 @@
     <!-- Technologies Section -->
     <section class="py-5">
         <div class="container">
-        <h2 class="text-center mb-5">Technologies Couvertes</h2>
+        <h2 class="text-center mb-5">
+            <i class="fas fa-laptop-code"></i> Technologies Couvertes
+        </h2>
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-2 col-6 mb-4 d-flex justify-content-center align-items-center">
                     <i class="fab fa-html5 icone-tech" style="color: #e34c26;"></i>
@@ -54,13 +56,15 @@
     <!-- Cours Récents -->
     <section class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Derniers Cours Ajoutés</h2>
+            <h2 class="text-center mb-5">
+                <i class="fas fa-history"></i> Derniers Cours Ajoutés
+            </h2>
             <div class="row">
                 <?php foreach (array_slice($cours_data['cours'], 0, 3) as $cours): ?>
                     <div class="col-md-4 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
-                                <span class="badge badge-<?php echo $cours['badge_color']; ?> mb-2">
+                                <span class="badge mb-2" style="color: <?php echo $cours['badge_color']; ?>">
                                     <i class="fab <?php echo $cours['icone'] ?>"></i> <?php echo $cours['technologie']; ?>
                                 </span>
                                 <h5 class="card-title"> <?php echo $cours['description']; ?></h5>
@@ -74,7 +78,7 @@
                             </div>
                             <div class="card-footer">
                                 <?php if ($is_logged_in): ?>
-                                    <a href="index.php?page=cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
+                                    <a href="index.php?page=cours_detail&id=<?php echo $cours['id']; ?>" class="btn btn-outline-primary btn-sm">
                                         <i class="fas fa-eye"></i> Voir le cours
                                     </a>
                                 <?php else: ?>

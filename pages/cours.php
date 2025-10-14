@@ -3,17 +3,25 @@
         header('Location: index.php?page=connexion');
         exit;
     }
+
+// Fichier JSON des utilisateurs
+$usersFile = __DIR__ . '/../auth/utilisateur.json';
+$usersData = json_decode(file_get_contents($usersFile), true);
+
+// Vérifier que le tableau d'utilisateurs existe
+if (!isset($usersData['utilisateurs'])) {
+    $usersData['utilisateurs'] = [];
+}
+
+// Récupérer l'id correct de l'utilisateur connecté
+$currentUserId = $_SESSION['user']['id'] ?? $_SESSION['user']['id_utilisateur'] ?? null;
+
+// Si aucun id valide, rediriger vers connexion
+if ($currentUserId === null) {
+    header("Location: index.php?page=connexion");
+    exit;
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    
     <div class="container mt-5">
         <h1 class="mb-4">Tous les Cours</h1>
         
@@ -61,7 +69,7 @@
                         </div>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a href="index.php?page=cours_detail.php?id=<?php echo $cours['id']; ?>" class="btn btn-primary btn-block">
+                        <a href="index.php?page=cours_detail&id=<?php echo $cours['id'] ?>" class="btn btn-primary btn-block">
                             Commencer le cours
                         </a>
                     </div>

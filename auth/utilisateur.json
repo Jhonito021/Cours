@@ -1,23 +1,42 @@
 {
     "utilisateurs": [
         {
-            "id_utilisateur": "68dfbd998c53f",
+            "id_utilisateur": "68e27120a9345",
             "nom": "Jhonito",
             "email": "jhonito021@gmail.com",
-            "password": "$2y$10$wrbbCNGQJRXzIwYdKoSy\/u.\/KKMdxMQFPQwgLbBtyDfwTr\/exb3oG",
+            "password": "$2y$10$fn0eDtFpHiceIz75xBR1qO2YX7.MCOMRNaIXCcX0fvsUawHxtIv6u",
             "progression": {
                 "cours_termines": [],
                 "scores_quiz": {
-                    "html": 0,
-                    "css": 0,
-                    "javascript": 0,
+                    "html": 55,
+                    "css": 40,
+                    "javascript": 20,
                     "php": 0,
                     "sql": 0
                 },
                 "projets_realises": []
             },
-            "date_inscription": "2025-10-03 12:12:09",
-            "avatar": "avatar_68dfbd998c53f.png"
+            "date_inscription": "2025-10-05 13:22:40",
+            "avatar": "avatar_68e27120a9345.png"
+        },
+        {
+            "id_utilisateur": "68e3654786b8c",
+            "nom": "Tiavina",
+            "email": "jhonito@gmail.com",
+            "password": "$2y$10$oriF4fFxHpwS9m4SBOexSeKR5enMXZACGC03B3qfBEplP2CvP1dOG",
+            "progression": {
+                "cours_termines": [],
+                "scores_quiz": {
+                    "html": 40,
+                    "css": 55,
+                    "javascript": 10,
+                    "php": 0,
+                    "sql": 0
+                },
+                "projets_realises": []
+            },
+            "date_inscription": "2025-10-06 06:44:23",
+            "avatar": "avatar_68e3654786b8c.png"
         }
     ]
 }

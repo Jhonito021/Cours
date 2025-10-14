@@ -14,6 +14,12 @@
             require 'include/footer.php';
             break;
 
+        case 'communaute':
+            require 'include/header.php';
+            include 'pages/communaute.php';
+            require 'include/footer.php';
+            break;
+
         case 'profil':
             require 'include/header.php';
             include 'pages/profil.php';
@@ -33,11 +39,13 @@
         case 'deconnexion':
             require 'auth/logout.php';
             require 'pages/acceuil.php';
+            require 'include/footer.php';
+            break;
         
         case 'cours_detail':
             require 'include/header.php';
             include 'pages/cours_detail.php';
-            include 'include/footer.php';
+            require 'include/footer.php';
             break;
 
         case 'modification':
@@ -49,13 +57,19 @@
         case 'suppression':
             require 'include/header.php';
             include 'pages/supprim_profil.php';
-            include 'include/footer.php';
+            require 'include/footer.php';
+            break;
+
+        case 'message':
+            require 'include/header.php';
+            include 'pages/message.php';
+            require 'include/footer.php';
             break;
         
         default:
             require 'include/header.php';
             require  'pages/acceuil.php';
-            include 'include/footer.php';
+            require 'include/footer.php';
             break;
          }
 ?>
