@@ -67,7 +67,7 @@
             break;
         
         default:
-            require '';
+            require 'include/header.php';
             require  'pages/acceuil.php';
             require 'include/footer.php';
             break;
